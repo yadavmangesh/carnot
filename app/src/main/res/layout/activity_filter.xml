@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".FilterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilterParameter"
+            android:layout_width="wrap_content"
+            tools:listitem="@layout/filter_parameter_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#F2F2F2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilterValues"
+            tools:listitem="@layout/filter_parameter_value_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/item_background"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/clearB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:text="Clear" />
+
+        <View
+            android:background="#9E9E9E"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_height="match_parent"
+            android:layout_width="1dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/applyB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@android:color/white"
+            android:text="Apply" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
